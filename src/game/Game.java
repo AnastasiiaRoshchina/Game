@@ -23,19 +23,21 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         int number = random.nextInt(9-0+1)+0;
         System.out.println("Программа загадала число от 0 до 9, угадай!");
-        for(int i=0; i<3; i++){
+       // for(int i=0; i<3; i++){
+       while(true){
             int userNumber = scanner.nextInt();
             if(number == userNumber) {
                 System.out.println("Ура! Ты выиграл!!!");
                 break;
             }else{
             if(attempt<2){
-            System.out.println("Неправильно. Попробуй еще раз.");
+            System.out.println("Неправильно. Попробуй еще раз.Попыток осталось" + (2-attempt));
             }else{
             System.out.println("Ты проиграл.");
+            break;
             }
         }   
         attempt++;    
-    }
-}
+   // }
+}}
 }
